@@ -1,2 +1,2 @@
 https://Cooper-s-Games.github.io
-### angry moose games homepage
+### the angry moose games homepage
