@@ -1,135 +1,182 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
-  <style>
-  html {
-  height: 100%;
+<style>
+
+:root {
+  --DarkMode: rgb(45, 45, 45);
+  --DarkMode2: rgb(55, 55, 55);
 }
 
 body {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  background-color: #3a3a3a;
+  font-family: Arial;
+  background-color: var(--DarkMode);
+  color: white;
+  margin: 0px;
+  overflow-x: hidden;
 }
 
-#main-holder {
-  width: 50%;
-  height: 70%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  background-color: blue;
-  border-radius: 7px;
-  box-shadow: 0px 0px 5px 2px black;
+a {
+  color: white;
+  text-decoration: none;
 }
 
-#login-error-msg-holder {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+a:hover {
+  color: rgb(225, 225, 225);
+  transition: color 0.25s;
 }
 
-#login-error-msg {
-  width: 23%;
+nav {
+  position: relative;
+  top: -16px;
+  width: 100vw;
+  height: 100px;
+  background-color: var(--DarkMode2);
+}
+
+li {
+  width: 100px;
+  font-size: 17px;
+  font-weight: bold;
+  list-style: none;
+  padding: 30px 35px;
+}
+
+h1 {
   text-align: center;
-  margin: 0;
-  padding: 5px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #8a0000;
-  border: 1px solid #8a0000;
-  background-color: #e58f8f;
-  opacity: 0;
 }
 
-#error-msg-second-line {
-  display: block;
+.left {
+  float: left;
 }
 
-#login-form {
-  align-self: flex-start;
-  display: grid;
-  justify-items: center;
-  align-items: center;
+.right {
+  float: right;
 }
 
-.login-form-field::placeholder {
-  color: #3a3a3a;
+.section {
+  background-color: var(--DarkMode2);
+  padding: 15px 20px;
+  border-radius: 10px;
 }
 
-.login-form-field {
-  border: none;
-  border-bottom: 1px solid #3a3a3a;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  outline: none;
-  padding: 0px 0px 5px 5px;
+.container {
+  position: absolute;
+  width: 33%;
+  left: 33%;
 }
 
-#login-form-submit {
-  width: 100%;
-  padding: 7px;
-  border: none;
-  border-radius: 5px;
-  color: blue;
-  font-weight: bold;
-  background-color: #3a3a3a;
-  cursor: pointer;
-  outline: none;
+#physics {
+  font-size: 35px;
 }
-  </style>
 
+</style>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Updates & Patch notes for Physics</title>
-  <link rel="stylesheet" href="login-page.css">
   <script defer src="patches.html"></script>
 </head>
 
 <body>
-  <main id="main-holder">
-    <h1 id="login-header">Patch notes [r3]</h1>
-  </main>
-- Cleaned up the physgun
-- New playermodel
-- New? Map!
-- Better spawn menu
-- UI revamp
-- Multiplayer framework revamp
-- A bunch of steam networking stuff
-- Workshop addons...
-- Various bugfixes
-- Health/ammo
-- Guns
-- Inventory
-- Various map fixes as well
-- Sounds and ambient music galore!
-- Rich presence
-
-  <h1>What's coming next update</h1>
-  - New maps!
-  - More workshop support!
-  - More playtesters O_O!
-  - Chat, voice chat!
-  - Physgun color changer!
-  - Physgun improvements as well as spawnmenu improvements!
-  - More bugfixes, as always!
-  - Possibly another UI revamp
-  - Level editor?
-  - And more...
   
-  <h1>Join the discord below if you want to become a playtester or are just interested in the game!</h1>
-  https://discord.gg/5pfeUnWy7n
+  <nav>
+    <ul>
+      <li class="left" id="physics">Physics</li>
+      <li class="right"><a href="https://discord.gg/5pfeUnWy7n">Discord</a></li>
+    </ul>
+  </nav>
+  
+  <div class="container">
+
+    <div class="section">
+      <h1>Patch Notes</h1><br>
+      <hr>
+      <div>
+        <h3>Cleaned up the physgun</h3>
+      </div>
+      <div>
+        <h3>New playermodel</h3>
+      </div>
+      <div>
+        <h3>New? Map!</h3>
+      </div>
+      <div>
+        <h3>Better spawn menu</h3>
+      </div>
+      <div>
+        <h3>UI revamp</h3>
+      </div>
+      <div>
+        <h3>Multiplayer framework revamp</h3>
+      </div>
+      <div>
+        <h3>A bunch of steam networking stuff</h3>
+      </div>
+      <div>
+        <h3>Workshop addons...</h3>
+      </div>
+      <div>
+        <h3>Various bugfixes</h3>
+      </div>
+      <div>
+        <h3>Health/ammo</h3>
+      </div>
+      <div>
+        <h3>Guns</h3>
+      </div>
+      <div>
+        <h3>Inventory</h3>
+      </div>
+      <div>
+        <h3>Various map fixes as well</h3>
+      </div>
+      <div>
+        <h3>Sounds and ambient music galore!</h3>
+      </div>
+      <div>
+        <h3>Rich presence</h3>
+      </div>
+    </div><br>
+
+    <div class="section">
+      <h1>What's coming in the next update?</h1><br>
+      <hr>
+      <div>
+        <h3>New maps!</h3>
+      </div>
+      <div>
+        <h3>More workshop support!</h3>
+      </div>
+      <div>
+        <h3>More playtesters O_O!</h3>
+      </div>
+      <div>
+        <h3>Chat and voice chat!</h3>
+      </div>
+      <div>
+        <h3>Physgun color changer!</h3>
+      </div>
+      <div>
+        <h3>Physgun improvements as well as spawnmenu improvements!</h3>
+      </div>
+      <div>
+        <h3>More bugfixes, as always!</h3>
+      </div>
+      <div>
+        <h3>Possibly another UI revamp</h3>
+      </div>
+      <div>
+        <h3>(Better) Level editor?</h3>
+      </div>
+      <div>
+        <h3>And more...</h3>
+      </div>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
