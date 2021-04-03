@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+        <title>Dev Blog 1 - C# - Blog/News - Physics</title>
+        <meta name="og:title" content="Dev Blog 1 - C# - Blog/News - Physics">
+
+   
+    
+   <link rel="icon" href="https://cdn.discordapp.com/attachments/786017730092204062/826859284046282782/JnyUPCnQ2.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.min.css"/>
+
+        <meta name="og:description" content="How modders will be able to create gamemodes in Physics using C#.">
+        <meta name="og:image" content="https://cdn.discordapp.com/attachments/786017730092204062/827316597282701332/console.PNG">
+
+</head>
+
+        <img class="background-media" src="https://media.discordapp.net/attachments/786017730092204062/827288147829719060/c7802ce14e04.png" />
+
+
+       <header class="header">
+        <div class="container">
+            <a href="https://angrymoosegames.com/physics/about" class="header-brand">
+                <img src="https://cdn.discordapp.com/attachments/786017730092204062/826984711125467136/icon.png">
+            </a>
+            <div class="header-navigation">
+                <a href="https://angrymoosegames.com/physics/news">news</a>
+                <a href="https://discord.gg/5pfeUnWy7n">discord</a>
+
+                    <a href="/forum">forums</a>
+
+            </div>
+        </div>
+    </header>
+
+    
+<div class="blog">
+
+        <div class="container">
+
+        <div class="header">
+
+            <div class="date">17 Feburary 2021</div>
+            <h1 class="title" editname="Title" type="text">Dev Blog 1 - C#</h1>
+          
+
+
+        </div>
+
+      </div>
+
+        
+
+    <div class="section" id="section73781" like-id="73781" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">My Goals</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                I don't want making addons and gamemodes to be a pain. I want you to be able to make a simple C# script, load it in, and play it.
+
+Here are my goals:
+
+<ul>
+    <li>Load new code at runtime, loads in quickly</li>
+    <li>Hotloads code while in-game</li>
+    <li>Easy to learn and start scripting</li>
+    <li>You don't have to install anything other than the base game (no SDks)</li>
+</ul>
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+        
+
+    <div class="section" id="section73782" like-id="73782" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Implementation</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+               Please note most of this code is spaghetti, I'm still testing it.
+
+How were implementing this is pretty straight forwart right now. There's a World class, a Gamemode class, and some Entity classes.
+
+Here's some example code from the <a href="https://github.com/AngryMooseGames/phys-testgamemode/">github repo</a>.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/811718980095836190/codesnippet.PNG"></center>
+
+This is creating the health, killfeed, and crossair. After that it adds the UI components to your game.
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+        
+
+    <div class="section" id="section73783" like-id="73783" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Network/Client Functions</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                There's a [Server] attribute on functions, which means that it runs always on the server. The engine knows to call the function server side. It can be called by the client. Here's an example.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/811757662269079603/codesnippet2.PNG"></center>
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+        
+
+    <div class="section" id="section73784" like-id="73784" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Console</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                In the last blog post I talked a bit about how I wanted a console in-game. I started working on it and I'm about 50% done.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/811718214744277023/devcondark.PNG"></center>
+
+This page gives you info for the gamemode. On the left is the gamemode json file, on the right is the stuff in the gamemode (or just currently open ingame). You can refresh to see any changes you've made.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/811718531213033512/devconmain.PNG"></center>
+
+Here's the main console window. You can enter commands, and eventually see logs. The only commands so far are input, which displays the keybind info, and map [mapname], which loads a map. I don't want custom commands, as I fear that might mess up the game for some players. But it might happen someday.
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+        
+
+    <div class="section" id="section73786" like-id="73786" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Wrapping up</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+              I hope you learned a bit more about how you can make gamemodes in C#, and you're excited to start modding! I made a <a href="https://webby.gitbook.io/physics/">wiki</a>, feel free to check it out. I'll add more to it as I add more stuff, and implement more.
+
+Cya.
+            </div>
+
+        </div>
+
+        
+
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="has-text-centered">
+                <a href="https://angrymoosegames.com"><img src="https://cdn.discordapp.com/attachments/786017730092204062/827276425181528064/footer.png" style="width: 60vw; max-width: 400px; margin-top: 2rem;"/></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
