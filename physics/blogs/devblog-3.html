@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+        <title>Dev Blog 3 - UI - Blog/News - Physics</title>
+        <meta name="og:title" content="Dev Blog 3 - UI - Blog/News - Physics">
+
+   
+    
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/786017730092204062/826859284046282782/JnyUPCnQ2.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.min.css"/>
+
+        <meta name="og:description" content="How I'm going to use HTML to create easy-to-modify UI ">
+        <meta name="og:image" content="https://cdn.discordapp.com/attachments/786017730092204062/827317077776924692/datacoremossman.PNG">
+
+</head>
+
+
+    <img class="background-media" src="https://media.discordapp.net/attachments/786017730092204062/827288147829719060/c7802ce14e04.png" />
+
+
+    
+      <header class="header">
+        <div class="container">
+            <a href="https://angrymoosegames.com/physics/about" class="header-brand">
+                <img src="https://cdn.discordapp.com/attachments/786017730092204062/826984711125467136/icon.png">
+            </a>
+            <div class="header-navigation">
+                <a href="https://angrymoosegames.com/physics/news">news</a>
+                <a href="https://discord.gg/5pfeUnWy7n">discord</a>
+
+                    <a href="/forum">forums</a>
+
+            </div>
+        </div>
+    </header>
+
+    
+<div class="blog">
+
+        <div class="container">
+
+        <div class="header">
+
+            <div class="date">03 April 2021</div>
+            <h1 class="title" editname="Title" type="text">Dev Blog 3 - UI</h1>
+
+                <div class="author">
+                    <div class="card user-card">
+    
+    
+
+</div>
+                </div>
+
+
+        </div>
+
+      </div>
+
+        
+
+    <div class="section" id="section73763" like-id="73763" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Why HTML?</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                I know HTML UI can sound hard to mess with at first, but it's actually pretty simple, and much easier to edit than UE's <a href="https://docs.unrealengine.com/en-US/InteractiveExperiences/UMG/UserGuide/WidgetTypeReference/index.html">widgets</a>. Putting all this work into UI allows it to be easier to the future, and what I want with my game is for modding to be easy and fun to mod. 
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+        
+
+  
+
+        
+
+    <div class="section" id="section73765" like-id="73765" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Components</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                I want to create a interface similar to <a href="https://sbox.facepunch.com/news/devblog3">s&box</a>, so I'm gonna use vue components to display stuff.
+
+I made a health/ammo bar.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827279871574016050/healthbar.PNG"/></center>
+
+<h3>C#</h3>
+
+The managed component provides the data for the UI. All of the js logic is in c#, so you're just displaying that data with html.
+
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827557724610232390/hudcomponents.PNG"></center>
+
+This is setting the properties Health and Armor for the local player's health and armor every tick.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827555325485645874/hud1.png"></center>
+
+
+You can add this component when creating the main HUD (you can add new components whenever you want).
+
+<h3>Vue</h3>
+
+Here's the vue file:
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827284836255006760/vitals.PNG"></center>
+
+The template section contains the html. It has the same properties as the c# file because it's bound to it. I'm using <a href="https://material.io/icons/">material icons</a> for the health and armor (and most other UI icons).
+
+You can use scss to style all this.
+
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827311252266024970/hud1.png"></center>
+
+This will set the hud class to absolute positioned. This means it will be positioned globally on the screen. I set it to be 16px, and display from the bottom left corner.
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827311250567331910/hud2.png"></center>
+
+This sets the basic style of the stuff inside of the hud (color, font, size, etc).
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827311481196118016/hud3.PNG"></center>
+
+Any divs under hud with the "disabled" class will have 30% opacity.
+            
+            </div>
+
+
+        </div>
+
+        
+
+
+
+    </div>
+        
+
+   
+
+
+
+        
+
+
+   <div class="section" id="section73768" like-id="73768" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Functions</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                Here's how I'm using functions with my chatbox.
+
+This is the code:
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827561711196176424/chatbox.PNG"></center>
+
+I now have a model called TextEntry and when I press enter, it sends the message with SendMessage.
+
+This is the managed component code:
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827570764944506880/snip.PNG"></center>
+
+TwoWay means it's updated by HTML. This means that when you type something into the input box it changes the value on the managed component.
+
+Here's the function:
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/827580785967366144/code.PNG"></center>
+
+There you go. Pretty cool! As you can tell, this code is very similar to the way s&box did it, that's what I want. I hope that allowing modders to eventually mess with HTML and make their own UI will be easier and more fun. See you next time :)
+            </div>
+
+        </div>
+
+        
+
+
+
+
+    </div>
+        
+
+
+        
+
+
+
+
+    </div>
+        
+
+ 
+
+        
+
+
+
+
+    </div>
+
+
+</div>
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="has-text-centered">
+                <a href="https://angrymoosegames.com"><img src="https://cdn.discordapp.com/attachments/786017730092204062/827276425181528064/footer.png" style="width: 60vw; max-width: 400px; margin-top: 2rem;"/></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
