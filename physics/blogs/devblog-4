@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+        <title>Dev Blog 4</title>
+        <meta name="og:title" content="Dev Blog 3 - Blog/News - Physics">
+
+   
+    
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/786017730092204062/826859284046282782/JnyUPCnQ2.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.min.css"/>
+
+        <meta name="og:description" content="Gamemodes, UI, and stuff I've been expirementing with">
+        <meta name="og:image" content="https://cdn.discordapp.com/attachments/786017730092204062/833366166462005289/20210418103857_1.jpg">
+
+</head>
+
+
+    <video class="background-media" src="https://cdn.discordapp.com/attachments/787462890592534548/829397487605121054/2021-04-07_11-47-27_Trim.mp4" autoplay muted loop></video>
+
+
+    
+      <header class="header">
+        <div class="container">
+            <a href="https://angrymoosegames.com/physics/about" class="header-brand">
+                <img src="https://cdn.discordapp.com/attachments/786017730092204062/826984711125467136/icon.png">
+            </a>
+            <div class="header-navigation">
+                <a href="https://angrymoosegames.com/physics/news">news</a>
+                <a href="https://discord.gg/5pfeUnWy7n">discord</a>
+            </div>
+        </div>
+    </header>
+
+    
+<div class="blog">
+
+        <div class="container">
+
+        <div class="header">
+
+            <div class="date">18 April 2021</div>
+            <h1 class="title" editname="Title" type="text">Dev Blog 4</h1>
+            <div class="subtitle" editname="Summary" type="text">Gamemodes, UI, and stuff I've been expirementing with</div>
+
+                <div class="author">
+                    <div class="card user-card">
+    
+    
+
+</div>
+                </div>
+
+
+        </div>
+
+      </div>
+
+        
+
+
+      <div class="section" id="section72746" like-id="72746" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Suicide Barrels</div>
+
+                   
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                <div>
+                    <div>
+                    </div><div class="edit-block" contenteditable="false" blocktype="image" data-image-style="floatr" title="Oof."><img src="https://cdn.discordapp.com/attachments/786017730092204062/833097586771623976/20210413090647_1.jpg" class="lightbox-thumbnail"></div><div>
+                </div><div>
+                </div><div>
+                </div><div>
+                </div><div>
+              
+
+I've been working on a Suicide Barrels gamemode to test AI and ragdolls.
+
+I'm using most code from my deathmatch gamemode, so it's been pretty simple to make.
+
+I'll probably release some code later on, so people can get some more examples of how gamemodes will be made.</div><div>
+            </div><div>
+            </div><div><br></div><div class="edit-block" contenteditable="false" blocktype="video"><video muted="" src="https://i.imgur.com/VuR7upw.mp4" controls=""></video></div><div><br></div><div>
+            </div><div>
+            </div>
+            </div>
+
+        </div>
+        
+
+
+
+
+    </div>
+
+    <div class="section" id="section72746" like-id="72746" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Deathmatch</div>
+
+                   
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                <div>
+                    <div>
+                    </div><div class="edit-block" contenteditable="false" blocktype="image" data-image-style="fullwidth" title="Ragdollin'"><img src="https://media.discordapp.net/attachments/787462890592534548/832269962705895434/20210413092642_1.jpg" class="lightbox-thumbnail"></div><div></div><div><br></div><div>
+
+                </div><div>
+                </div><div>
+                </div><div>
+                </div><div>
+              
+
+Deathmatch is still pretty raw. I've been using it as the base shooter gamemode, but I know there's still a bit of work I need to do on it to make it more deathmatch-y and less devtesting-y.</div><div>
+            </div><div>
+            </div><div>
+            </div>
+            </div>
+
+        </div>
+        
+
+
+
+
+    </div>
+        
+
+  
+
+        
+
+    <div class="section" id="section73765" like-id="73765" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">UI Updates</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                I made the menu/pause menu UI look much nicer. I also added a load screen.
+
+
+<h3>Main menu</h3>
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/833088364294438922/20210417161508_1.jpg"/></center>
+
+<h3>Pause menu</h3>
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/833088365317586964/20210417161521_1.jpg"/></center>
+
+<h3>Load screen</h3>
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/833088366756233266/20210417161525_1.jpg"></center>
+
+Some gamemodes have custom image backgrounds.
+
+
+
+            
+            </div>
+
+
+        </div>
+
+        
+
+
+
+    </div>
+        
+
+   
+</div>
+
+
+        
+
+
+    <div class="section" id="section73402" like-id="73402" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Keybinds</div>
+
+                   
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+                Here's some of my keybinds. I want this to be part of the developer tools, because unreal input can be weird to mess with. Thix isn't in the game yet, but I'm working on it. Here's an example keybind that enables noclip:
+
+<center><img src="https://cdn.discordapp.com/attachments/786017730092204062/833389432417026118/keybind.PNG"></center>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+
+
+    </div>
+        
+
+
+
+    <div class="section" id="section72745" like-id="72745" like-handler="LikeBlogSection">
+        <div class="inner">
+            <div class="section-header">
+
+                <div class="title" editname="Title" type="text">Custom Imports</div>
+
+
+            </div>
+
+
+
+            <div class="content" editname="Contents" using-lightbox>
+Models from Source, are of course, different sizes and have different bones. For example, mossman is a giant and I had to scale her down to 0.025 to make it look normal. So I've been expirementing with custom asset import sizes.
+
+You'll be able to have a bunch of options to mess around with. You can even leave it as the default import if you want.
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+   
+
+
+ 
+
+
+ 
+
+        
+    </div>
+
+
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="has-text-centered">
+                <a href="https://angrymoosegames.com"><img src="https://cdn.discordapp.com/attachments/786017730092204062/827276425181528064/footer.png" style="width: 60vw; max-width: 400px; margin-top: 2rem;"/></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
