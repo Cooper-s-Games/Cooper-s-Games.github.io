@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+    <title>Devblog 3 - UI - Physics</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Physics">
+    <meta property="og:locale" content="en_US"/>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/786017730092204062/826859284046282782/JnyUPCnQ2.png" type="image/x-icon">
+       
+            <meta name="description" content="How I'm going to use HTML to create easy-to-modify UI  I know HTML UI can sound hard to mess with at first, but it's actually pretty simple, and much easier to edit than..">
+        <meta property="og:description" content="How I'm going to use HTML to create easy-to-modify UI  I know HTML UI can sound hard to mess with at first, but it's actually pretty simple, and much easier to edit than..">
+        <meta property="twitter:description" content="How I'm going to use HTML to create easy-to-modify UI  I know HTML UI can sound hard to mess with at first, but it's actually pretty simple, and much easier to edit than..">
+    <meta property="og:title" content="Devblog 3 - UI - Physics">
+    <meta name="twitter:site" content="playphysicsgame">
+    <meta name="twitter:creator" content="playphysicsgame">
+        <meta property="og:image" content="https://cdn.discordapp.com/attachments/787462890592534548/829370421199372370/suicidebarrels.PNG">
+        <meta name="twitter:image:src" content="https://cdn.discordapp.com/attachments/787462890592534548/829370421199372370/suicidebarrels.PNG">
+        <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="styles.min.css">
+
+
+
+    
+
+
+
+
+    
+
+</head>
+
+
+    <div id="wrapper">
+
+        
+
+        <div id="header">
+
+
+            <div class="navbar is-dark navbar-main" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                            <a class="navbar-item logo" href="https://angrymoosegames.com/physics/about"><img src="https://cdn.discordapp.com/attachments/786017730092204062/838870573710180428/phys_icon_transparent_white.png"/></a>
+
+                        <span class="navbar-burger burger" id="nav-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+
+                    <div class="navbar-menu" id="nav-menu">
+                        <div class="navbar-start">
+                            <!-- navbar items -->
+                        </div>
+
+                        <div class="navbar-end">
+                            <a ng-repeat="" class="navbar-item is-active" href="https://angrymoosegames.com/physics/news">
+        
+        
+                                Blog
+        
+                            </a>
+                            <a ng-repeat="" class="navbar-item " href="https://discord.gg/5pfeUnWy7n">
+        
+        
+                                Discord
+        
+                            </a>
+                            <a ng-repeat="" class="navbar-item " href="https://angrymoosegames.com/physics/commits">
+        
+        
+                                Commits
+        
+                            </a>
+                            <a ng-repeat="" class="navbar-item " href="https://store.steampowered.com/app/1559670/Physics/">
+        
+        
+                                Steam
+        
+                            </a>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="content">
+            
+
+
+            <section class="hero blog-header page-hero is-fullheight" style="position: relative; overflow: hidden;"><div style="position: absolute; overflow: hidden; z-index: 0; pointer-events: none; mask-image: -webkit-linear-gradient(white 20%, transparent 99%); inset: -16px; filter: blur(8px) brightness(50%); background-image: url(); background-size: cover; background-position: center center;" class="background-media-container"></div><div class="hero-body"><div class="container has-text-centered"><div class="blog-header-content"><div class="tags is-block"><span class="tag is-primary is-medium">General</span><!----><!----></div><span class="blog-date">Saturday, April 3, 2021</span><h1 class="title hero-title is-size-3-mobile">Devblog 3 - UI</h1><p class="subtitle blog-subtitle">How I'm going to use HTML to create easy-to-modify UI</p><!----></div></div></div><div class="hero-footer has-text-centered"><div class="container"><div class="user-card is-author"><div class="visible-card-container"><div class="user-card-photo" style="background-image: url();"></div></div><!----></div></div></div></section>
+
+
+
+    <section class="section blogentry" id="Why_HTML">
+        <div class="container content">
+            <div class="title"><a href="#Why_HTML">Why HTML?</a></div>
+                <div class="subtitle author"><a href=""></a></div>
+
+<p>   I know HTML UI can sound hard to mess with at first, but it's actually pretty simple, and much easier to edit than UE's <a href="https://docs.unrealengine.com/en-US/InteractiveExperiences/UMG/UserGuide/WidgetTypeReference/index.html">widgets</a>. Putting all this work into UI allows it to be easier to the future, and what I want with my game is for modding to be easy and fun to mod. 
+</p>
+
+
+
+
+        </div>
+    </section>
+    <section class="section blogentry" id="Components">
+        <div class="container content">
+            <div class="title"><a href="#Components">Components </a></div>
+                <div class="subtitle author"><a href=""></a></div>
+
+
+<p>  I want to create a interface similar to <a href="https://sbox.facepunch.com/news/devblog3">s&box</a>, so I'm gonna use vue components to display stuff.
+
+    I made a health/ammo bar</a>.</p>
+
+    <img src="https://cdn.discordapp.com/attachments/786017730092204062/827279871574016050/healthbar.PNG"/>
+
+<h3>C#</h3>
+
+<p>The managed component provides the data for the UI. All of the js logic is in c#, so you're just displaying that data with html.</p>
+
+<img src="https://cdn.discordapp.com/attachments/786017730092204062/827557724610232390/hudcomponents.PNG">
+
+<p>
+    This is setting the properties Health and Armor for the local player's health and armor every tick.</p>
+
+    <img src="https://cdn.discordapp.com/attachments/786017730092204062/827555325485645874/hud1.png">
+
+<p>You can add this component when creating the main HUD (you can add new components whenever you want).</p>
+
+<h3>Vue</h3>
+
+<p>Here's the vue file:</p>
+
+<img src="https://cdn.discordapp.com/attachments/786017730092204062/827284836255006760/vitals.PNG">
+
+<p>The template section contains the html. It has the same properties as the c# file because it's bound to it. I'm using <a href="https://material.io/icons/">material icons</a> for the health and armor (and most other UI icons).
+
+    You can use scss to style all this.</p>
+
+    <img src="https://cdn.discordapp.com/attachments/786017730092204062/827311252266024970/hud1.png">
+
+<p>This will set the hud class to absolute positioned. This means it will be positioned globally on the screen. I set it to be 16px, and display from the bottom left corner.</p>
+
+<img src="https://cdn.discordapp.com/attachments/786017730092204062/827311250567331910/hud2.png">
+
+<p>This sets the basic style of the stuff inside of the hud (color, font, size, etc).</p>
+
+<img src="https://cdn.discordapp.com/attachments/786017730092204062/827311481196118016/hud3.PNG">
+
+<p>Any divs under hud with the "disabled" class will have 30% opacity.</p>
+
+
+        </div>
+    </section>
+    <section class="section blogentry" id="Functions">
+        <div class="container content">
+            <div class="title"><a href="#Functions">Functions</a></div>
+                <div class="subtitle author"><a href=""></a></div>
+
+
+<p>   Here's how I'm using functions with my chatbox.
+
+    This is the code:</p>
+
+    <img src="https://cdn.discordapp.com/attachments/786017730092204062/827561711196176424/chatbox.PNG">
+
+<p>I now have a model called TextEntry and when I press enter, it sends the message with SendMessage.
+
+    This is the managed component code:</p>
+
+    <img src="https://cdn.discordapp.com/attachments/786017730092204062/827570764944506880/snip.PNG">
+
+<p>TwoWay means it's updated by HTML. This means that when you type something into the input box it changes the value on the managed component.
+
+    Here's the function:
+    </p>
+
+    <img src="https://cdn.discordapp.com/attachments/786017730092204062/827580785967366144/code.PNG">
+
+<p>There you go. Pretty cool! As you can tell, this code is very similar to the way s&box did it, that's what I want. I hope that allowing modders to eventually mess with HTML and make their own UI will be easier and more fun. See you next time :)</p>
+        </div>
+  
+   
+    
+        </div>
+        
+        <script>
+            var forum = new Vue( { el: '#content' } );
+        </script>
+
+       
+
+        
+
+    </div>
+
+
+
+    <script>
+        PageEnd();
+    </script>
+
+</body>
+</html>

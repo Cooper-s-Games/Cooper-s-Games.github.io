@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+    <title>Devblog 1 - C# - Physics</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Cache-control" content="public">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="language" content="english">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Physics">
+    <meta property="og:locale" content="en_US"/>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/786017730092204062/826859284046282782/JnyUPCnQ2.png" type="image/x-icon">
+       
+            <meta name="description" content="How modders will be able to create addons with C#  I don't want making addons and gamemodes to be a pain. I want you to be able to make a simple C# script, load it in, and play..">
+        <meta property="og:description" content="How modders will be able to create addons with C#  I don't want making addons and gamemodes to be a pain. I want you to be able to make a simple C# script, load it in, and play..">
+        <meta property="twitter:description" content="How modders will be able to create addons with C#  I don't want making addons and gamemodes to be a pain. I want you to be able to make a simple C# script, load it in, and play it..">
+    <meta property="og:title" content="Devblog 1 - C# - Physics">
+    <meta name="twitter:site" content="playphysicsgame">
+    <meta name="twitter:creator" content="playphysicsgame">
+        <meta property="og:image" content="https://media.discordapp.net/attachments/787462890592534548/806616129468497930/Capture.PNG">
+        <meta name="twitter:image:src" content="https://media.discordapp.net/attachments/787462890592534548/806616129468497930/Capture.PNG">
+        <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="styles.min.css">
+
+
+
+    
+
+
+
+
+    
+
+</head>
+
+
+    <div id="wrapper">
+
+        
+
+        <div id="header">
+
+
+            <div class="navbar is-dark navbar-main" role="navigation" aria-label="main navigation">
+                <div class="container">
+                    <div class="navbar-brand">
+                            <a class="navbar-item logo" href="https://angrymoosegames.com/physics/about"><img src="https://cdn.discordapp.com/attachments/786017730092204062/838870573710180428/phys_icon_transparent_white.png"/></a>
+
+                        <span class="navbar-burger burger" id="nav-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+
+                    <div class="navbar-menu" id="nav-menu">
+                        <div class="navbar-start">
+                            <!-- navbar items -->
+                        </div>
+
+                        <div class="navbar-end">
+                            <a ng-repeat="" class="navbar-item is-active" href="https://angrymoosegames.com/physics/news">
+        
+        
+                                Blog
+        
+                            </a>
+                            <a ng-repeat="" class="navbar-item " href="https://discord.gg/5pfeUnWy7n">
+        
+        
+                                Discord
+        
+                            </a>
+                            <a ng-repeat="" class="navbar-item " href="https://angrymoosegames.com/physics/commits">
+        
+        
+                                Commits
+        
+                            </a>
+                            <a ng-repeat="" class="navbar-item " href="https://store.steampowered.com/app/1559670/Physics/">
+        
+        
+                                Steam
+        
+                            </a>
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div id="content">
+            
+
+
+            <section class="hero blog-header page-hero is-fullheight" style="position: relative; overflow: hidden;"><div style="position: absolute; overflow: hidden; z-index: 0; pointer-events: none; mask-image: -webkit-linear-gradient(white 20%, transparent 99%); inset: -16px; filter: blur(8px) brightness(50%); background-image: url(); background-size: cover; background-position: center center;" class="background-media-container"></div><div class="hero-body"><div class="container has-text-centered"><div class="blog-header-content"><div class="tags is-block"><span class="tag is-primary is-medium">General</span><!----><!----></div><span class="blog-date">Wednesday, February 17, 2021</span><h1 class="title hero-title is-size-3-mobile">Devblog 1 - C#</h1><p class="subtitle blog-subtitle">How modders will be able to create addons with C#</p><!----></div></div></div><div class="hero-footer has-text-centered"><div class="container"><div class="user-card is-author"><div class="visible-card-container"><div class="user-card-photo" style="background-image: url();"></div></div><!----></div></div></div></section>
+
+
+
+    <section class="section blogentry" id="My_Goals">
+        <div class="container content">
+            <div class="title"><a href="#My_Goals">My Goals</a></div>
+                <div class="subtitle author"><a href=""></a></div>
+
+<p>  I don't want making addons and gamemodes to be a pain. I want you to be able to make a simple C# script, load it in, and play it.
+
+    Here are my goals:
+</p>
+
+<ul>
+    <li>Load new code at runtime, loads in quickly</li>
+    <li>Hotloads code while in-game</li>
+    <li>Easy to learn and start scripting</li>
+    <li>You don't have to install anything other than the base game (no SDks)</li>
+</ul>
+
+
+        </div>
+    </section>
+    <section class="section blogentry" id="Implementation">
+        <div class="container content">
+            <div class="title"><a href="#Implementation">Implementation </a></div>
+                <div class="subtitle author"><a href=""></a></div>
+
+
+<p>Here's some example code from the <a href="https://github.com/AngryMooseGames/phys-testgamemode/">github repo</a>.</p>
+
+<img src="https://cdn.discordapp.com/attachments/786017730092204062/811718980095836190/codesnippet.PNG">
+
+<p>This will create the basic stuff, health, UI, crosshair, and add it to the screen when you start the gamemode. You can add your own HUD elements here once you create them.</p>
+
+
+        </div>
+    </section>
+    <section class="section blogentry" id="Networking">
+        <div class="container content">
+            <div class="title"><a href="#Networking">Network/Client Functions</a></div>
+                <div class="subtitle author"><a href=""></a></div>
+
+
+<p>  There's a [Server] attribute on functions, which means that it always runs on the server. The engine knows to call the function server side. It can be called by the client.</p>
+        </div>
+  
+    <section class="section blogentry" id="Console">
+        <div class="container content">
+            <div class="title"><a href="#Console">Console</a></div>
+                <div class="subtitle author"><a href=""></a></div>
+            <p> In the last blog post I talked a bit about how I wanted a console in-game. I started working on it and I'm about 50% done.
+                
+                <img src="https://cdn.discordapp.com/attachments/786017730092204062/811718531213033512/devconmain.PNG">
+                
+                Here's the main console window. You can enter commands, and eventually see logs. The only commands so far are input, which displays the keybind info, and map [mapname], which loads a map. I don't want custom commands, as I fear that might mess up the game for some players. But it might happen someday.</p>
+
+
+
+        </div>
+  
+
+ 
+
+
+        </div>
+    </section>
+    <section class="section blogentry" id="Wrap_Up">
+        <div class="container content">
+            <div class="title"><a href="#Wrap_Up">Wrapping Up</a></div>
+                <div class="subtitle author"><a href=""></a></div>
+            <p>I hope you learned a bit more about how you can make gamemodes in C#, and you're excited to start modding! I made a <a href="https://webby.gitbook.io/physics/">wiki</a>, feel free to check it out. I hope I'll add more to it once I get it working.
+
+                Cya.
+</p>
+        </div>
+ 
+
+
+  
+
+
+
+
+
+
+
+
+    </div>
+</div>
+    </div>
+</section>
+        </div>
+        
+        <script>
+            var forum = new Vue( { el: '#content' } );
+        </script>
+
+       
+
+        
+
+    </div>
+
+
+
+    <script>
+        PageEnd();
+    </script>
+
+</body>
+</html>
